@@ -20,3 +20,5 @@ Contents
 
    usage
    api
+   core-api-ref-http-rest
+   core-api-ref-zmq
