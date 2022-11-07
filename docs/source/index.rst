@@ -22,4 +22,4 @@ Contents
    api
    core-api-ref-http-rest
    core-api-ref-zmq
-   core-guide-block-chain
+   core-guide-block-chain.md
