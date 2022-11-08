@@ -7,8 +7,8 @@ Core Guide
   blockchain/index.rst
   dash-features/index.rst
 
-.. toctree::
-  :maxdepth: 3
-  :glob:
+.. .. toctree::
+..   :maxdepth: 3
+..   :glob:
 
-  *
+..   *

@@ -2,12 +2,12 @@
 
 # -- Project information
 
-project = 'Lumache'
-copyright = '2021, Graziella'
-author = 'Graziella'
+project = 'Dash Core'
+copyright = '2022, DCG'
+author = ''
 
-release = '0.1'
-version = '0.1.0'
+release = '18.1'
+version = '18.1.0'
 
 # -- General configuration
 
@@ -18,6 +18,7 @@ extensions = [
     'sphinx.ext.autosummary',
     'sphinx.ext.intersphinx',
     'myst_parser',
+    # 'sphinx_immaterial',
 ]
 
 intersphinx_mapping = {
@@ -31,6 +32,7 @@ templates_path = ['_templates']
 # -- Options for HTML output
 
 html_theme = 'sphinx_rtd_theme'
+# html_theme = 'sphinx_immaterial'
 
 # -- Options for EPUB output
 epub_show_urls = 'footnote'
