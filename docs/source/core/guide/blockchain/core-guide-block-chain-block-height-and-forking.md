@@ -1,3 +1,5 @@
+# Block Height and Forking
+
 Any Dash <<glossary:miner>> who successfully hashes a <<glossary:block header>> to a value below the <<glossary:target threshold>> can add the entire <<glossary:block>> to the <<glossary:block chain>> (assuming the block is otherwise valid). These blocks are commonly addressed by their <<glossary:block height>>---the number of blocks between them and the first Dash block (block 0, most commonly known as the <<glossary:genesis block>>).
 
 ![Common And Uncommon Block Chain Forks](https://dash-docs.github.io/img/dev/en-blockchain-fork.svg)

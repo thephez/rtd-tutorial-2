@@ -1,3 +1,5 @@
+# Proof of Work
+
 The <<glossary:block chain>> is collaboratively maintained by anonymous <<glossary:peers>> on the <<glossary:network>>, so Dash requires that each <<glossary:block>> prove a significant amount of work was invested in its creation to ensure that untrustworthy peers who want to modify past blocks have to work harder than honest peers who only want to add new blocks to the block chain.
 
 Chaining blocks together makes it impossible to modify <<glossary:transactions>> included in any block without modifying all following blocks. As a result, the cost to modify a particular block increases with every new block added to the block chain, magnifying the effect of the proof of work.

@@ -1,3 +1,5 @@
+# Blockchain Overview
+
 ![Block Chain Overview](https://dash-docs.github.io/img/dev/en-blockchain-overview.svg)
 
 The illustration above shows a simplified version of a <<glossary:block chain>>. A <<glossary:block>> of one or more new transactions is collected into the <<glossary:transaction>> data part of a block. Copies of each transaction are hashed, and the hashes are then paired, hashed, paired again, and hashed again until a single hash remains, the <<glossary:merkle root>> of a <<glossary:merkle tree>>.
