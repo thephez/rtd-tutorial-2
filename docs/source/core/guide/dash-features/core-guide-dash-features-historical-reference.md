@@ -7,7 +7,7 @@
   "title": "Deprecated Content"
 }
 [/block]
-# InstantSend (original)
+## InstantSend (original)
 [block:callout]
 {
   "type": "warning",

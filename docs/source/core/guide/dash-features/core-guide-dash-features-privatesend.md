@@ -1,4 +1,4 @@
-## CoinJoin
+# CoinJoin
 
 Dash Core's mixing feature provides a way to improve privacy by performing non-custodial CoinJoin. For additional details, reference this [Official Documentation page](https://docs.dash.org/en/stable/introduction/features.html#privatesend).
 
@@ -14,7 +14,7 @@ The following video provides an overview with a good introduction to the details
   "height": "350px"
 }
 [/block]
-# Wallet Preparation
+## Wallet Preparation
 
 The <<glossary:wallet>> completes two operations in this phase:
 
@@ -50,7 +50,7 @@ In protocol version 70208, collateral inputs can be anything from 2x the minimum
 
 [Example Testnet collateral payment transaction](https://testnet-insight.dashevo.org/insight/tx/de51e6f7c5ef75aad0dbb0a808ef4873d7ef6d67b25f3a658d5a241db4f3eeeb)
 
-# CoinJoin Processing
+## CoinJoin Processing
 
 This phase involves exchanging a sequence of messages with a <<glossary:masternode>> so it can construct a denominate transaction with inputs from the clients in its pool.
 
@@ -118,7 +118,7 @@ _**General**_
 
   With the exception of the [`dsq` message](core-ref-p2p-network-privatesend-messages#dsq) and the [`dstx` message](core-ref-p2p-network-privatesend-messages#dstx) (which need to be public and do not expose any private information), all CoinJoin P2P messages are sent directly between the masternode processing the transaction and the relevant client(s).
 
-# Fees
+## Fees
 
 **Processing Fees**
 

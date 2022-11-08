@@ -6,7 +6,7 @@ Dash Core 0.14 (protocol version 70214) introduced the <<glossary:Long-Living Ma
 
 The main task of LLMQs is to perform threshold signing of consensus-related messages (e.g. <<glossary:ChainLocks>>).
 
-# LLMQ Creation (DKG)
+## LLMQ Creation (DKG)
 
 The following table details the data flow of P2P messages exchanged during the distributed key generation (DKG) protocol used to establish an LLMQ.
 [block:callout]
@@ -49,7 +49,7 @@ The following table details the data flow of P2P messages exchanged during the d
 |                                                | ← | [`getdata` message](core-ref-p2p-network-data-messages#getdata) (qfcommit) | Peer(s) respond with request for quorum final commitment
 | [`qfcommit` message](core-ref-p2p-network-quorum-messages#qfcommit)                             | → |                              | Masternode sends the requested final commitment
 
-# LLMQ Signing Session
+## LLMQ Signing Session
 
 The following table details the data flow of P2P messages exchanged during an LLMQ signing session. These sessions take advantage of BLS threshold signatures to enable quorums to sign arbitrary messages. For example, Dash Core 0.14 uses this capability to create the quorum signature found in the [`clsig` message](core-ref-p2p-network-instantsend-messages#clsig) that enables <<glossary:ChainLocks>>.
 
@@ -76,7 +76,7 @@ Note the following timeouts defined by Dash Core related to signing sessions:
 | `SIG_SHARE_REQUEST_TIMEOUT` | 5 | Time to wait for a requested share before requesting from a different node |
 | `SESSION_TOTAL_TIMEOUT` | 300 | Time to wait for session to complete |
 
-# Quorum Configuration
+## Quorum Configuration
 
 Mainnet and Testnet only use quorums of pre-defined sizes that are hard coded into Dash Core. RegTest and Devnet environments each have a quorum that supports custom size and threshold parameters that are controlled via command line or configuration file parameters (`llmqtestparams`/`llmqdevnetparams`).
 
