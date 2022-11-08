@@ -1,3 +1,5 @@
+# ChainLocks
+
 Dash's <<glossary:ChainLock>> feature leverages <<glossary:LLMQ>> Signing Requests/Sessions to reduce uncertainty when receiving funds and remove the possibility of 51% mining attacks.
 
 For each block, an LLMQ of a few hundred <<glossary:masternodes>> (300-400) is selected and each participating member signs the first <<glossary:block>> that it sees extending the active chain at the current <<glossary:block height>>. If enough members (at least 240) see the same block as the first block, they will be able to create a [`clsig` message](core-ref-p2p-network-instantsend-messages#clsig) and propagate it to all <<glossary:nodes>> in the <<glossary:network>>.

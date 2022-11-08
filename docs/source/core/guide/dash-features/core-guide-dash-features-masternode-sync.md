@@ -1,3 +1,5 @@
+# Masternode Sync
+
 Dash Core performs full <<glossary:masternode>> synchronization as required. There are several conditions that initiate a start/restart the sync process:
 
 * Initial startup of Dash Core
@@ -5,7 +7,7 @@ Dash Core performs full <<glossary:masternode>> synchronization as required. The
 * A failure occurred during the last sync attempt (after a 1 minute cooldown before sync restarts)
 * Issuing a [`mnsync reset` RPC](core-api-ref-remote-procedure-calls-dash#mnsync) command
 
-# Initial Masternode Sync
+## Initial Masternode Sync
 
 The deterministic masternode lists introduced by [DIP3](https://github.com/dashpay/dips/blob/master/dip-0003.md) eliminated several steps of the sync process related to the masternode list and masternode payments. Since that information is now available on-chain, P2P messages related to those steps were deprecated.
 
@@ -37,7 +39,7 @@ There are several status values used to track masternode synchronization. They a
 | 4   | `MASTERNODE_SYNC_GOVERNANCE`  | Synchronizing governance objects  |
 | 999 | `MASTERNODE_SYNC_FINISHED`    | Synchronization finished |
 
-# Ongoing Masternode Sync
+## Ongoing Masternode Sync
 
 Once a masternode completes an initial full sync, continuing synchronization is maintained by the exchange of P2P messages with other <<glossary:nodes>>. This diagram shows an overview of the messages exchanged to keep governance objects synchronized between masternodes.
 
@@ -47,7 +49,7 @@ Once a masternode completes an initial full sync, continuing synchronization is 
 
 After the initial governance synchronization, governance information is kept current by the [`govobj` messages](core-ref-p2p-network-governance-messages#govobj) and [`govobjvote` messages](core-ref-p2p-network-governance-messages#govobjvote) relayed on the <<glossary:network>>. Unsynchronized <<glossary:peers>> may send [`govsync` messages](core-ref-p2p-network-governance-messages#govsync) to request governance sync.
 
-# Masternode Sync Schedule
+## Masternode Sync Schedule
 
 The following tables detail the timing of various functions used to keep the masternodes in sync with each other. This information is derived from the scheduler section of `AppInitMain` in `src/init.cpp`.
 

@@ -1,3 +1,5 @@
+# Masternode Quorums
+
 Dash's <<glossary:masternode>> quorums are used to facilitate the operation of masternode provided features in a decentralized, deterministic way. The original quorums (used largely for <<glossary:InstantSend>> and masternode payments) were ephemeral and used for a single purpose (e.g. voting on one specific InstantSend transaction).
 
 Dash Core 0.14 (protocol version 70214) introduced the <<glossary:Long-Living Masternode Quorum>>  (LLMQ) system described in detail by [DIP6](https://github.com/dashpay/dips/blob/master/dip-0006.md). These LLMQs are deterministic subsets of the global deterministic masternode list that are formed via a distributed key generation (DKG) protocol and remain active for a long periods of time (e.g. hours to days).

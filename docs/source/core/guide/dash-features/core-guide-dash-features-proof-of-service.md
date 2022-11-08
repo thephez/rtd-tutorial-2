@@ -1,6 +1,8 @@
+# Proof of Service
+
 The Proof of Service (PoSe) scoring system helps incentivize <<glossary:masternodes>> to provide <<glossary:network>> services. Masternodes that neglect to participate receive an increased PoSe score which eventually results in them being excluded from masternode payment eligibility.
 
-# Distributed Key Generation Participation Requirements
+## Distributed Key Generation Participation Requirements
 
 The following table lists the aspects of the DKG process a masternode must comply with to avoid receiving a PoSe score increase:
 
@@ -10,7 +12,7 @@ The following table lists the aspects of the DKG process a masternode must compl
 | 70218+ | Have an open P2P port ([Dash Core 0.16.0+](https://github.com/dashpay/dash/pull/3390)). _Enforcement of this requirement is dependent on Spork 23 being enabled_ |
 | 70218+ | Have a protocol version => [`MIN_MASTERNODE_PROTO_VERSION`](https://github.com/dashpay/dash/blob/v0.16.x/src/version.h#L26). During updates where this version is increased, masternodes will begin receiving PoSe score increases once > 80% of masternodes have upgrade ([Dash Core 0.16.0+](https://github.com/dashpay/dash/pull/3390)). _Enforcement of this requirement is dependent on Spork 23 being enabled_ |
 
-# Proof of Service Score Weighting
+## Proof of Service Score Weighting
 
 The current PoSe scoring system is based only on participation in the <<glossary:LLMQ>> DKG process. This scoring system will expand over time to incorporate additional service requirements in support of the future Dash functionality.
 
@@ -18,7 +20,7 @@ The current PoSe scoring system is based only on participation in the <<glossary
 | ----------- | :----: | ------------------- |
 | LLMQ DKG    | 100% | Participate in the DKG process used to establish LLMQs. Requires exchanging messages with other quorum members |
 
-# **PoSe Score Calculation**
+## PoSe Score Calculation
 
 As shown in the following table, the PoSe Score always decreases by 1 per <<glossary:block>> as long as a masternode has not been banned. Once banned, the masternode can only be restored by sending a Provider Update Service ([ProUpServTx](core-ref-transactions-special-transactions#proupservtx)) special transaction.
 

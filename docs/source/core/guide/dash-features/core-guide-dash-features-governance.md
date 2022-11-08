@@ -1,4 +1,5 @@
-# Synchronization
+# Governance
+## Synchronization
 
 Dash Core synchronizes the governance system via the <<glossary:masternode>> <<glossary:network>> as the last stage of the Masternode sync process (following the sync of sporks, the Masternode list, and Masternode payments).
 
@@ -32,7 +33,7 @@ For Vote Sync:
 
 Once the syncing <<glossary:node>> receives the counts and inventories, it may request any `govobj` and `govobjvote` objects from the masternode via a [`getdata` message](core-ref-p2p-network-data-messages#getdata).
 
-## Governance Sync Data Flow
+### Governance Sync Data Flow
 
 | **Syncing Node Message** | **Direction**  | **Masternode Response**   | **Description** |
 | --- | --- | --- | --- |
@@ -50,22 +51,22 @@ Once the syncing <<glossary:node>> receives the counts and inventories, it may r
 | [`getdata` message](core-ref-p2p-network-data-messages#getdata) (govobjvote) | →              |                           | (Optional) Syncing node requests govobjvote
 |                          | ←              | [`govobjvote` message](core-ref-p2p-network-governance-messages#govobjvote)      | (If requested) Governance object vote
 
-# Sentinel
+## Sentinel
 
 [Sentinel](https://github.com/dashpay/sentinel/) is a Python application that connects to a masternode's local dashd instance to run as an autonomous agent for persisting, processing, and automating Dash 12.1+ governance objects and tasks. Sentinel abstracts some governance details away from Dash Core for easier extensibility of the governance system in the future. This will allow the integration between Evolution and Dash Core to proceed more smoothly and enable new governance object additions with minimal impact to Dash Core.
 
 Sentinel runs periodically and performs three main tasks as described below:
 governance sync, governance object pruning, and superblock management. The governance object data is stored in a SQLite database.
 
-## Sentinel Sync
+### Sentinel Sync
 
 Sentinel issues a [`gobject list` RPC](core-api-ref-remote-procedure-calls-dash#gobject-list) command and updates its database with the results returned from dashd. When objects are removed from the network, they are purged from the Sentinel database.
 
-## Sentinel Prune
+### Sentinel Prune
 
 Sentinel 1.1.0 introduced proposal pruning which automatically votes to delete expired proposals following approximately half of a <<glossary:superblock>> cycle. This delay period ensures that proposals are not deleted prematurely. Prior to this, proposals remained in memory unless a sufficient number of masternodes manually voted to delete them.
 
-## Sentinel Superblock
+### Sentinel Superblock
 
 Sentinel manages superblock creation, voting, and submission to dashd for network propagation.
 
