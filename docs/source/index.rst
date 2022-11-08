@@ -22,4 +22,5 @@ Contents
    api
    core-api-ref-http-rest
    core-api-ref-zmq
-   core-guide-block-chain.md
+   core/index.rst
+   
