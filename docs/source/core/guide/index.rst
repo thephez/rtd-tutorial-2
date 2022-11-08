@@ -1,0 +1,7 @@
+Core Guide
+----------
+
+.. toctree::
+  :glob:
+
+  *

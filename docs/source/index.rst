@@ -17,10 +17,9 @@ Contents
 --------
 
 .. toctree::
+   :maxdepth: 3
 
    usage
    api
-   core-api-ref-http-rest
-   core-api-ref-zmq
    core/index.rst
    

@@ -1,8 +1,10 @@
-Core Guide
-----------
+Core
+====
 
 .. toctree::
+  :glob:
 
-   guide/core-guide-block-chain.md
-   
+  guide/index.rst
+
+
    
