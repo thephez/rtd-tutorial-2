@@ -7,3 +7,8 @@ Each full node in the Dash network independently stores a block chain containing
 > 🚧 Testnet Stability
 >
 > As a testing network, Testnet may be subject to occasional updates and changes that break backwards compatibility. Please visit [this page](https://dash-testnet.freshstatus.io/) to see current testnet status.
+
+
+See the :term:`Blockchain` definition in the glossary.
+
+See the :term:`blockchain` definition in the glossary.

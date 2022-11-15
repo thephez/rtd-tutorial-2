@@ -18,6 +18,7 @@ extensions = [
     'sphinx.ext.autosummary',
     'sphinx.ext.intersphinx',
     'myst_parser',
+    'hoverxref.extension',
     # 'sphinx_immaterial',
 ]
 
@@ -26,6 +27,12 @@ intersphinx_mapping = {
     'sphinx': ('https://www.sphinx-doc.org/en/master/', None),
 }
 intersphinx_disabled_domains = ['std']
+
+hoverxref_roles = [
+    'numref',
+    'confval',
+    'setting',
+]
 
 templates_path = ['_templates']
 
