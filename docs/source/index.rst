@@ -9,7 +9,7 @@ Welcome to documentation!
 
    See the :term:`Address` definition in the glossary.
    
-   See the :term:`blockchain` definition in the glossary.
+   See the :term:`blockchain<Blockchain>` definition in the glossary.
 
 Contents
 --------
