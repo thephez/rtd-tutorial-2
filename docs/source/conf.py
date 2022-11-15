@@ -32,6 +32,7 @@ hoverxref_roles = [
     'numref',
     'confval',
     'setting',
+    'term',
 ]
 
 templates_path = ['_templates']
