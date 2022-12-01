@@ -18,6 +18,7 @@ extensions = [
     'sphinx.ext.autosummary',
     'sphinx.ext.intersphinx',
     'myst_parser',
+    'hoverxref.extension',
     # 'sphinx_immaterial',
 ]
 
@@ -27,12 +28,20 @@ intersphinx_mapping = {
 }
 intersphinx_disabled_domains = ['std']
 
+hoverxref_roles = [
+    'numref',
+    'confval',
+    'setting',
+    'term',
+]
+
 templates_path = ['_templates']
 
 # -- Options for HTML output
 
-html_theme = 'sphinx_rtd_theme'
+# html_theme = 'sphinx_rtd_theme'
 # html_theme = 'sphinx_immaterial'
+html_theme = "pydata_sphinx_theme"
 
 # -- Options for EPUB output
 epub_show_urls = 'footnote'
